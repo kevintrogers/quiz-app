@@ -31,6 +31,44 @@
   }
   
 }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
 /*Logo Animations*/
 .index .brand--top {
   animation: fadeIn .4s, slideDown .4s;
@@ -59,11 +97,17 @@
 /*Results Page*/
 
 .character {
-  visibility: hidden;
-  opacity: 0;
-  animation: fadeIn .5s;
+
+  animation: fadeIn .5s forwards, tada .5s forwards;
 }
 .character-description {
-  animation: fadeIn .8s 1s;
+    visibility: hidden;
+  opacity: 0;
+  animation: fadeIn .5s .65s forwards;
+}
+.share {
+  opacity: 0;
+  visibility: hidden;
+  animation: zoomIn .7s 1s forwards;
 }
 
