@@ -32,11 +32,38 @@
   
 }
 /*Logo Animations*/
-.brand--top {
+.index .brand--top {
   animation: fadeIn .4s, slideDown .4s;
   
 }
 
-.main {
+/*Body Animations*/
+
+.index .main {
   animation: slideUp .7s;
 }
+
+/*Button Animations*/
+.btn {
+  transition: all .3s;
+}
+
+/*Quiz Page Animations*/
+.answer-link {
+  transition: all .8s;
+}
+.answer-link.is-selected {
+  transition: transform .25s;
+  transform: scale(1.035);
+}
+/*Results Page*/
+
+.character {
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn .5s;
+}
+.character-description {
+  animation: fadeIn .8s 1s;
+}
+
